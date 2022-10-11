@@ -15,11 +15,16 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Login from './components/Login';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <SplashScreen/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
 ]);
 
@@ -28,7 +33,7 @@ library.add(fab, faCheckSquare, faCoffee);
 
 function App() {
   return (
-    <div className="px-2">      
+    <div id="app" className="px-2 w-screen h-full min-h-full box-border">      
       <RouterProvider router={router} />
     </div>
   );
