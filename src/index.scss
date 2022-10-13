@@ -11,19 +11,44 @@ html,body {
   height: -webkit-fill-available;
   width: 100%;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 #root{
   max-height: 100vh;
 }
-#Login {
-  div{
-    &:nth-child(1){
-      border: 2px solid $primary-color;
-    }
+
+
+// Disabling default input styling 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  // border: none;
+}
+input:focus {
+  outline: none; /* Removes the border when the input is clicked */
+}
+input::placeholder{
+  text-align: center;
+  font-size: large;
+}
+
+// Button styling
+@layer components {
+  .myBtn {
+    @apply absolute bottom-0 left-0 right-0 bg-[darkgrey] text-[rgb(83,83,83)] text-center p-3 font-semibold cursor-pointer box-border w-full m-auto max-w-3xl;
   }
+}
+
+.enable{
+  background-color: $primary-color !important;
+  color: white !important;
 }

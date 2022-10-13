@@ -1,11 +1,11 @@
 import './App.scss';
-import SplashScreen from './components/SplashScreen';
+
 
 // Fontawesome 
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -15,7 +15,11 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+
+// Components 
+import SplashScreen from './components/SplashScreen';
 import Login from './components/Login';
+import Otp from './components/Otp'
 
 const router = createBrowserRouter([
   {
@@ -26,9 +30,13 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login/>,
   },
+  {
+    path: "/otp",
+    element: <Otp/>,
+  },
 ]);
 
-library.add(fab, faCheckSquare, faCoffee);
+library.add(fab, faCheckSquare, faCoffee,faArrowLeft);
 
 
 function App() {
