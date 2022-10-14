@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useNavigate } from 'react-router-dom';
 
 function Otp() {
+  const navigate = useNavigate()
   const [otp, setotp] = useState({
     a : "",
     b : "",
@@ -15,17 +17,23 @@ function Otp() {
   let inputs = document.querySelectorAll('input');
   inputs.forEach(elem=>elem.addEventListener('keyup',key=>{
     if(key.key==="Backspace"){
-      console.log(elem.value.length);
-      if(elem.value.length==0){
         elem.previousElementSibling.focus();
-      }
     }else{
       elem.nextElementSibling.focus();
     }
   }))
+
+  const handleClick=()=>{
+    if(otp['e']?.length==1){
+      navigate('/landingpage/home')
+    }
+  }
+  const goBack=()=>{
+    navigate('/login')
+  }
   return (
     <div className='box-border p-2 max-w-3xl m-auto'>
-      <FontAwesomeIcon icon="arrow-left" size='lg'/>
+      <FontAwesomeIcon icon="arrow-left" size='lg' onClick={goBack}/>
       <h1 style={{fontSize:"28px"}} className='font-semibold'>Enter the 5 digit OTP sent to to XXXXXXXXXX</h1>
       <div className="flex">
         <input name='a' type="number" className='m-1 border rounded-md w-9 h-9 text-center' style={{borderColor:'darkgray'} } value={otp.a} onChange={handleOnChange}/>
@@ -34,6 +42,7 @@ function Otp() {
         <input name='d' type="number" className='m-1 border rounded-md w-9 h-9 text-center' style={{borderColor:'darkgray'} } value={otp.d} onChange={handleOnChange}/>
         <input name='e' type="number" className='m-1 border rounded-md w-9 h-9 text-center' style={{borderColor:'darkgray'} } value={otp.e} onChange={handleOnChange}/>
       </div>
+      <div className={otp['e']?.length==1?'enable myBtn':'myBtn'} onClick={handleClick}>VERIFY</div>
     </div>
   )
 }

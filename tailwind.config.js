@@ -10,6 +10,9 @@ module.exports = {
       'primary':'#6739b7',
       'background':'#ebe0ff'
     },
+    // fontFamily:{
+    //   'Ubuntux':'Ubuntu',
+    // }
   },
   plugins: [],
 }
