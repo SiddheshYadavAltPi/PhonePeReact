@@ -5,7 +5,7 @@ import './App.scss';
 import ReactDOM from 'react-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faArrowLeft,faQrcode } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft,faBagShopping,faFileCircleCheck,faHouse,faIndianRupeeSign,faQrcode, faRightLeft } from '@fortawesome/free-solid-svg-icons'
 import { faUser,faBell,faQuestionCircle } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
 
 
 
-library.add(fab,faUser,faArrowLeft,faBell,faQrcode,faQuestionCircle);
+library.add(fab,faUser,faArrowLeft,faBell,faQrcode,faQuestionCircle,faHouse,faBagShopping,faFileCircleCheck,faIndianRupeeSign,faRightLeft);
 function App() {
   return (
     <div id="app" className=" w-screen h-full min-h-full box-border">      

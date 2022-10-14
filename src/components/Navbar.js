@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navbar() {
   return (
-    <nav className='flex sticky top-0 z-10 justify-between align-middle p-2 bg-primary mb-2 text-[color:white]'>
+    <nav className='flex sticky top-0 z-10 justify-between align-middle p-2 bg-primary text-[color:white]'>
         <div className='flex justify-center align-middle'>
             <div className='mr-4 bg-[white] rounded-lg py-1'>
                 <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />

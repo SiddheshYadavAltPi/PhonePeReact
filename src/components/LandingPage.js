@@ -5,9 +5,11 @@ import Navbar from "./Navbar";
 
 function LandingPage() {
   return (
-    <div>
+    <div >
       <Navbar />
-      <Outlet />
+      <div className="bg-background min-h-screen">
+        <Outlet />
+      </div>
       <BottomNav />
     </div>
   );
