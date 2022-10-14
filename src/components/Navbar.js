@@ -10,13 +10,12 @@ function Navbar() {
             </div>
             <div className='pt-[0.5px] font-medium text-lg'>Add Address▾</div>
         </div>
-        <div className='text-2xl font-black font-Ubuntu'>PhonePe</div>
-        <div className='flex justify-center align-middle'>
-            <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />
-            <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />
-            <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />
+        <div className='text-2xl font-black font-Ubuntu border-box hidden md:block'>PhonePe</div>
+        <div className='flex justify-center align-middle text-white box-border pt-[6px] mr-2'>
+            <FontAwesomeIcon size='lg' className='mx-3' icon="qrcode" />
+            <FontAwesomeIcon size='lg' className='mx-3' icon={["far","bell"]} />
+            <FontAwesomeIcon size='lg' className='mx-3' icon={["far","question-circle"]} />
         </div>
-            <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />
     </nav>
   )
 }
