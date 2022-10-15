@@ -8,7 +8,7 @@ function SplashScreen() {
   useEffect(() => {
     return () => {
       setTimeout(() => {
-        // navigate('/login');
+        navigate('/login');
       }, 2500);
     }
   })
