@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PhonePeReact/static/css/main.7965dfb4.css",
-    "main.js": "/PhonePeReact/static/js/main.c078ebd1.js",
+    "main.js": "/PhonePeReact/static/js/main.7f834893.js",
     "static/js/787.323bd7ec.chunk.js": "/PhonePeReact/static/js/787.323bd7ec.chunk.js",
     "index.html": "/PhonePeReact/index.html",
     "main.7965dfb4.css.map": "/PhonePeReact/static/css/main.7965dfb4.css.map",
-    "main.c078ebd1.js.map": "/PhonePeReact/static/js/main.c078ebd1.js.map",
+    "main.7f834893.js.map": "/PhonePeReact/static/js/main.7f834893.js.map",
     "787.323bd7ec.chunk.js.map": "/PhonePeReact/static/js/787.323bd7ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7965dfb4.css",
-    "static/js/main.c078ebd1.js"
+    "static/js/main.7f834893.js"
   ]
 }
