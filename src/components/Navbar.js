@@ -1,9 +1,19 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navbar() {
+  const htmlElem = document.getElementsByTagName('html')[0];
+  const [darkMode, setdarkMode] = useState(false);
+  useEffect(() => {
+    console.log(darkMode);
+    darkMode?htmlElem.classList.add('dark'):htmlElem.classList.remove('dark');
+  })
+  
+  const switchTheme =()=>{
+    darkMode?setdarkMode(false):setdarkMode(true);
+  }
   return (
-    <nav className='flex sticky top-0 z-10 justify-between align-middle p-2 bg-primary text-[color:white]'>
+    <nav className='flex sticky top-0 z-10 justify-between align-middle p-2 bg-primary text-[color:white] dark:bg-dark_primary'>
         <div className='flex justify-center align-middle'>
             <div className='mr-4 bg-[white] rounded-lg py-1'>
                 <FontAwesomeIcon size='lg' className='text-primary mx-2' icon={["far","user"]} />
@@ -14,7 +24,8 @@ function Navbar() {
         <div className='flex justify-center align-middle text-white box-border pt-[6px] mr-2'>
             <FontAwesomeIcon size='lg' className='mx-3' icon="qrcode" />
             <FontAwesomeIcon size='lg' className='mx-3' icon={["far","bell"]} />
-            <FontAwesomeIcon size='lg' className='mx-3' icon={["far","question-circle"]} />
+            {darkMode?<FontAwesomeIcon size='lg' className='mx-3' icon="sun" onClick={switchTheme}/>:
+            <FontAwesomeIcon size='lg' className='mx-3' icon="moon" onClick={switchTheme}/>}
         </div>
     </nav>
   )

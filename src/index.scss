@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$dark-primary-color: #522c94;
+$dark-secondary-color: #8f4fff;
+$dark-ternary-color: #e2d1ff;
+$dark-background-color:#2b194d;
+$dark-background-coor:#2a66c5;
+
 $primary-color: #6739b7;
 $background-color:#ebe0ff;
 $Roboto:Roboto, sans-serif;
@@ -20,6 +27,7 @@ html,body {
 
 #root{
   max-height: 100vh;
+  overflow: scroll;
 }
 
 
@@ -51,4 +59,8 @@ input::placeholder{
 .enable{
   background-color: $primary-color !important;
   color: white !important;
+}
+
+.iAmActiveBitch + div{
+  color: $primary-color;
 }

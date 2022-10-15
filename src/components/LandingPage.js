@@ -5,9 +5,9 @@ import Navbar from "./Navbar";
 
 function LandingPage() {
   return (
-    <div >
+    <div>
       <Navbar />
-      <div className="bg-background min-h-screen">
+      <div className="bg-background min-h-screen dark:bg-[black]">
         <Outlet />
       </div>
       <BottomNav />

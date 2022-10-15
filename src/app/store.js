@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from "../features/themeSlice"
+import userDataReducer from "../features/userDataSlice"
 
 export default configureStore({
   reducer: {
-    theme : themeReducer
+    userData : userDataReducer
   }
-})
+});

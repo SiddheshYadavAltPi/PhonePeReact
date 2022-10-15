@@ -5,10 +5,11 @@ import './App.scss';
 import ReactDOM from 'react-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faArrowLeft,faBagShopping,faFileCircleCheck,faHouse,faIndianRupeeSign,faQrcode, faRightLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft,faBagShopping,faFileCircleCheck,faHouse,faIndianRupeeSign,faQrcode, faRightLeft,faBuildingColumns,faRotateLeft,faLandmark, faWallet, faGift, faBullhorn, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faUser,faBell,faQuestionCircle } from '@fortawesome/free-regular-svg-icons'
 
-
+// Swiper js 
+import "swiper/css/bundle";
 
 // Router 
 import {
@@ -72,10 +73,10 @@ const router = createBrowserRouter([
 
 
 
-library.add(fab,faUser,faArrowLeft,faBell,faQrcode,faQuestionCircle,faHouse,faBagShopping,faFileCircleCheck,faIndianRupeeSign,faRightLeft);
+library.add(fab,faUser,faArrowLeft,faBell,faQrcode,faQuestionCircle,faHouse,faBagShopping,faFileCircleCheck,faIndianRupeeSign,faRightLeft,faBuildingColumns,faRotateLeft,faLandmark, faWallet, faGift, faBullhorn,faSun,faMoon);
 function App() {
   return (
-    <div id="app" className=" w-screen h-full min-h-full box-border">      
+    <div id="app" className=" w-screen h-full min-h-full box-border ">      
       <RouterProvider router={router} />
     </div>
   );
