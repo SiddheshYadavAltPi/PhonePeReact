@@ -31,7 +31,7 @@ import Insurance from './components/Pages/Insurance';
 import Wealth from './components/Pages/Wealth';
 import History from './components/Pages/History';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <SplashScreen/>,
